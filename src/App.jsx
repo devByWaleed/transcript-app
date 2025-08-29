@@ -32,7 +32,7 @@ function App() {
     try {
 
       // Fetching transcript from backend
-      const res = await fetch('http://127.0.0.1:5000/api/transcript', {
+      const res = await fetch('/api/transcript', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ url }),  // Send URL as JSON body
@@ -60,7 +60,7 @@ function App() {
 
   const translate = async (text) => {
     try {
-      const response = await fetch('http://127.0.0.1:5000/api/translate', {
+      const response = await fetch('/api/translate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
