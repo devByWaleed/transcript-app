@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+
+.loader {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 10px solid transparent; /* thickness of the slice */
+  border-top: 10px solid;
+  border-image: conic-gradient(
+    from 0deg,
+    #6a11cb 0%,
+    #8e44ad 25%,
+    #572c5f 100%
+  ) 1; /* purple gradient */
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
