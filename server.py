@@ -6,6 +6,11 @@ import re
 import requests
 import os
 
+
+'''
+Creating Flask App
+Bundled with React static website
+'''
 app = Flask(
     __name__,
     static_folder="./dist",      # path to your built React files
@@ -14,9 +19,11 @@ app = Flask(
 CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 
-# # Creating a flask app
-# app = Flask(__name__)
-# CORS(app, resources={r"/api/*": {"origins": "*"}})
+'''
+# Creating a flask app (Separate Frontend & Backend)
+app = Flask(__name__)
+CORS(app, resources={r"/api/*": {"origins": "*"}})
+'''
 
 
 # Fetch video id from yt video url
